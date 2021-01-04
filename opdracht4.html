@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Cursus</title>
+    </head>
+
+    <style>
+
+        div {
+            width: 200px;
+        }
+
+        .inleiding {
+            font-style: italic;
+            color: gray;
+            background-color: beige;
+        }
+
+        .text {
+            color: rgb(22, 145, 104);
+            font-family: Georgia;
+            font-size: 20px;
+        }
+
+    </style>
+
+    <body>
+        <div>
+            <p class="inleiding"> Dit is een inleiding van hoofdstuk 1....... </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?
+            </p>
+        </div>
+        <div>
+            <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?
+            </p>
+        </div>
+        <script>
+
+            var intro = document.getElementsByClassName("inleiding"); 
+            for (var i = 0; i < intro.length; i++) { 
+                console.log(intro[i].innerHTML); 
+            } 
+
+            var parafs = document.getElementsByTagName("div")[0].getElementsByTagName("p"); 
+            for (var i = 1; i < parafs.length; i++) { 
+                parafs[i].classList.add("text"); 
+            } 
+            
+            var parafs = document.getElementsByTagName("div")[1].getElementsByTagName("p"); 
+            for (var i = 1; i < parafs.length; i++) { 
+                parafs[i].classList.add("text"); 
+            } 
+
+
+            
+        </script>
+    </body>
+
+</html>
+
