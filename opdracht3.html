@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Cursus</title>
+    </head>
+    
+    <style>
+        div {
+            width: 200px;
+        }
+
+        .inleiding {
+            font-style: italic;
+            color: gray;
+            background-color: beige;
+        }
+    </style>
+
+    <body>
+        <div>
+            <p class="inleiding"> Dit is een inleiding van hoofdstuk 1....... </p>
+            <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?</p>
+        </div>
+        <div>
+            <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
+            <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?</p>
+        </div>
+        <script>
+
+            var intro = document.getElementsByClassName("inleiding"); 
+            for (var i = 0; i < intro.length; i++) { 
+                console.log(intro[i].innerHTML); 
+            } 
+
+            var text = document.getElementsByClassName("text"); 
+            for (var i = 0; i < text.length; i++) { 
+               text[i].innerHTML+="--einde--"; 
+               text[i].style.color = "red";
+            } 
+
+        </script>
+    </body>
+
+</html>
