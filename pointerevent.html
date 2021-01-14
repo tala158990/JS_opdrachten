@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript Cursus</title>
+    </head>
+
+    <style>
+        div {
+            width: 200px;
+        }
+
+        .inleiding {
+            font-style: italic;
+            color: red;
+            background-color: beige;
+        }
+
+        .blok {
+            color: rgb(55, 115, 206);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .no-events {
+            pointer-events: none;
+            background-color: rgb(210, 252, 210);
+        }
+    </style>
+
+    <body>
+        <div class="blok">
+            <p class="inleiding no-events"> Dit is een inleiding van hoofdstuk 1....... </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?
+            </p>
+        </div>
+        <div class="blok">
+            <p class="inleiding no-events"> Dit is een inleiding van hoofdstuk ....... </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+                sequi?
+            </p>
+        </div>
+        <script>
+
+            var inleiding = document.querySelector(".inleiding");
+            var blok = document.querySelector(".blok");
+
+            inleiding.addEventListener("click", function (e) {
+                console.log("-----------inleiding-------------------");
+                console.log("inleiding target");
+                console.log(e.target);
+                console.log("inleiding currentTarget:");
+                console.log(e.currentTarget)
+                console.log("event object inleiding:");
+                console.dir(e);
+
+            });
+
+            blok.addEventListener("click", function (e) {
+                console.log("-----------blok-------------------");
+                console.log("blok target");
+                console.log(e.target);
+                console.log("blok currentTarget");
+                console.log(e.currentTarget)
+                console.log("event object blok:");
+                console.dir(e);
+
+
+            });
+
+
+
+            
+        </script>
+
+
+
+
+    
+    </body>
+
+</html>
