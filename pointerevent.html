@@ -15,7 +15,6 @@
         font-style: italic;
         color: gray;
         background-color: beige;
-        pointer-events: none;
     }
 
     .text {
@@ -23,6 +22,7 @@
         font-family: Georgia;
         font-size: 20px;
         border-style: hidden;
+        pointer-events: none;
     }
 
     .box:not(:first-child) {
@@ -60,17 +60,44 @@
         var text = document.querySelectorAll(".text");
 
         for (let i = 0; i < text.length; i++) {
-            text[i].addEventListener("click", function () {
+            text[i].addEventListener("click", function (e) {
                 text[i].classList.toggle("textcolor");
+
+                console.log("-----------Text-------------------");
+                console.log("Text target");
+                console.log(e.target);
+                console.log("Text currentTarget:");
+                console.log(e.currentTarget)
+                console.log("event object Text:");
+                console.dir(e);
             });
         }
+
+
+
+
         var inleiding = document.querySelectorAll(".inleiding");
 
         for (let i = 0; i < inleiding.length; i++) {
-            inleiding[i].addEventListener("click", function () {
+            inleiding[i].addEventListener("click", function (e) {
                 inleiding[i].classList.toggle("inleidingcolor");
+
+                console.log("-----------inleiding-------------------");
+                console.log("inleiding target");
+                console.log(e.target);
+                console.log("inleiding currentTarget");
+                console.log(e.currentTarget)
+                console.log("event object inleiding:");
+                console.dir(e);
             });
         }
+
+
+
+
+
+
+
 
 
 
