@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>JavaScript Cursus</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Cursus</title>
+</head>
 
-    <style>
-        div {
-            width: 200px;
-        }
+<style>
+    div {
+        width: 200px;
+    }
 
-        .inleiding {
-            font-style: italic;
-            color: red;
-            background-color: beige;
-        }
+    .inleiding {
+        font-style: italic;
+        color: gray;
+        background-color: beige;
+    }
 
-        .blok {
-            color: rgb(55, 115, 206);
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-        }
-    </style>
+    .text {
+        color: rgb(22, 145, 104);
+        font-family: Georgia;
+        font-size: 20px;
+        border-style: hidden;
+    }
 
-    <body>
-        <div class="blok">
-            <p class="inleiding"> Dit is een inleiding van hoofdstuk 1....... </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
-                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
-                sequi?
-            </p>
-        </div>
-        <div class="blok">
-            <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
-                laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
-                sequi?
-            </p>
-        </div>
-        <script>
+    .box:not(:first-child) {
+        margin-left: 1rem;
+    }
 
-            var inleiding = document.querySelector(".inleiding");
-            var blok = document.querySelector(".blok");
+    .textcolor {
+        border-color: rgb(255, 0, 0);
+        border-style: groove;
+    }
 
-            inleiding.addEventListener("click", function (e) {
-                console.log("-----------inleiding-------------------");
-                console.log("inleiding target");
-                console.log(e.target);
-                console.log("inleiding currentTarget:");
-                console.log(e.currentTarget)
-                console.log("event object inleiding:");
-                console.dir(e);
+    .inleidingcolor {
+        border-color: rgb(38, 0, 255);
+        border-style: groove;
+    }
+</style>
 
+<body>
+    <div class="text">
+
+        <p class="inleiding"> Dit is een inleiding van hoofdstuk 1....... </p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+            laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+            sequi?
+        </p>
+    </div>
+    <div class="text">
+        <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad
+            laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod
+            sequi?
+        </p>
+    </div>
+    <script>
+        var text = document.querySelectorAll(".text");
+
+        for (let i = 0; i < text.length; i++) {
+            text[i].addEventListener("click", function () {
+                text[i].classList.toggle("textcolor");
             });
+        }
+        var inleiding = document.querySelectorAll(".inleiding");
 
-            blok.addEventListener("click", function (e) {
-                console.log("-----------blok-------------------");
-                console.log("blok target");
-                console.log(e.target);
-                console.log("blok currentTarget");
-                console.log(e.currentTarget)
-                console.log("event object blok:");
-                console.dir(e);
-
-
+        for (let i = 0; i < inleiding.length; i++) {
+            inleiding[i].addEventListener("click", function () {
+                inleiding[i].classList.toggle("inleidingcolor");
             });
-
-
-        </script>
-
+        }
 
 
 
-
-    </body>
+    </script>
+</body>
 
 </html>
