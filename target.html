@@ -59,7 +59,7 @@
         var text = document.querySelectorAll(".text");
 
         for (let i = 0; i < text.length; i++) {
-            text[i].addEventListener("click", function () {
+            text[i].addEventListener("click", function (e) {
                 text[i].classList.toggle("textcolor");
 
                 console.log("-----------Text-------------------");
@@ -78,7 +78,7 @@
         var inleiding = document.querySelectorAll(".inleiding");
 
         for (let i = 0; i < inleiding.length; i++) {
-            inleiding[i].addEventListener("click", function () {
+            inleiding[i].addEventListener("click", function (e) {
                 inleiding[i].classList.toggle("inleidingcolor");
 
                 console.log("-----------inleiding-------------------");
