@@ -1,0 +1,60 @@
+<!doctype HTML>
+<HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Cursus</title>
+</head>
+<style>
+    div {
+        width: 200px;
+    }
+    
+    .inleiding {
+        font-style: italic;
+        color: gray;
+        background-color: beige;
+    }
+    
+    .active {
+        border-color: red;
+        border-style: groove;
+    }
+</style>
+
+<body>
+    <div>
+        <p class="inleiding active"> Dit is een inleiding van hoofdstuk 1....... </p>
+        <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod sequi? </p>
+    </div>
+    <div>
+        <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
+        <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod sequi? </p>
+    </div>
+    <div>
+        <p class="inleiding"> Dit is een inleiding van hoofdstuk ....... </p>
+        <p class="text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid eos animi deserunt aut accusamus ad laboriosam qui, accusantium, inventore dolor natus est quis voluptas neque voluptatibus repudiandae non quod sequi? </p>
+    </div>
+    <script>
+        var divje = document.getElementsByTagName("div");
+
+
+        var divje = document.getElementsByTagName("div");
+        for (var i = 0; i < divje.length; i++) {
+            divje[i].addEventListener("click", function(e) {
+
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+
+
+
+            });
+
+
+        }
+    </script>
+
+</body>
+
+</HTML>
